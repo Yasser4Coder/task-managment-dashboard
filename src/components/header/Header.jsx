@@ -1,8 +1,10 @@
 import { IoNotificationsOutline } from "react-icons/io5";
 import { useState } from "react";
 import { FiMenu } from "react-icons/fi";
-
+import { useLocation } from "react-router-dom";
 const Header = () => {
+  const location = useLocation();
+
   const [showNotifications, setShowNotifications] = useState(false);
   const user = {
     username: "Yasser Benseghier",
@@ -11,14 +13,24 @@ const Header = () => {
   };
   return (
     <div className="w-full h-full flex items-center justify-between">
-      <div className="hidden md:flex flex-col items-center">
-        <h1 className="text-secondary-500 text-xl font-semibold">
-          Hi, {user.username}!
-        </h1>
-        <p className=" text-secondary-400 text-base font-medium">
-          Let's finish your task today!
-        </p>
-      </div>
+      {location.pathname === "/" ? (
+        <div className="hidden md:flex flex-col items-center">
+          <h1 className="text-secondary-500 text-xl font-semibold">
+            Hi, {user.username}!
+          </h1>
+          <p className=" text-secondary-400 text-base font-medium">
+            Let's finish your task today!
+          </p>
+        </div>
+      ) : (
+        <div className="hidden md:flex flex-col items-center">
+          <h1 className="text-secondary-500 text-xl font-semibold">
+            {location.pathname === "/task"
+              ? "Explore Tasks"
+              : "Explore Mentors"}
+          </h1>
+        </div>
+      )}
       <div className="flex md:hidden items-center gap-4">
         <FiMenu size={24} style={{ cursor: "pointer" }} />
       </div>

@@ -39,7 +39,7 @@ const MonthlyMentors = () => {
       </div>
 
       {/* Slider wrapper */}
-      <div className="overflow-hidden w-[700px] mx-auto">
+      <div className="overflow-hidden md:w-[55vw] mx-auto">
         <div
           ref={scrollRef}
           className="flex gap-[30px] overflow-x-hidden py-[10px] scroll-smooth hide-scrollbar"

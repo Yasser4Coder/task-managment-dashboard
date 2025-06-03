@@ -6,7 +6,7 @@ import UpcomingTask from "./components/UpcomingTask";
 
 const Dashboard = () => {
   return (
-    <div className="w-full px-[20px] md:px-[0px] flex max-w-[746px] md:min-w-[746px] flex-col gap-[65px]">
+    <div className="w-full px-[20px] md:px-[0px] flex flex-col gap-[65px]">
       {/* Top section */}
       <div className="w-full flex flex-col md:flex-row gap-4">
         <RunningTaskCard />

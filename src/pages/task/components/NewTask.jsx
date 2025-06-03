@@ -1,8 +1,8 @@
 import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
-import MentorCard from "./MentorCard";
+import UpcomingTaskCard from "../../dashboard/components/UpcomingTaskCard";
 import { useRef } from "react";
-import UpcomingTaskCard from "./UpcomingTaskCard";
-const UpcomingTask = () => {
+
+const NewTask = () => {
   const scrollRef = useRef(null);
 
   const scrollLeft = () => {
@@ -19,9 +19,7 @@ const UpcomingTask = () => {
   return (
     <div className="w-full overflow-hidden">
       <div className="flex items-center justify-between mb-4">
-        <h1 className="text-secondary-500 font-semibold text-xl">
-          Upcoming Task
-        </h1>
+        <h1 className="text-secondary-500 font-semibold text-xl">New Task</h1>
         <div className="flex items-center gap-2">
           <button
             onClick={scrollLeft}
@@ -39,11 +37,12 @@ const UpcomingTask = () => {
       </div>
 
       {/* Slider wrapper */}
-      <div className="overflow-hidden md:w-[55vw] mx-auto">
+      <div className="overflow-x-hidden w-[76vw] mx-auto">
         <div
           ref={scrollRef}
           className="flex gap-[30px] overflow-x-hidden py-[10px] scroll-smooth hide-scrollbar"
         >
+          <UpcomingTaskCard />
           <UpcomingTaskCard />
           <UpcomingTaskCard />
           <UpcomingTaskCard />
@@ -54,4 +53,4 @@ const UpcomingTask = () => {
   );
 };
 
-export default UpcomingTask;
+export default NewTask;

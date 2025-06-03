@@ -53,7 +53,7 @@ const HomePageLayout = () => {
       <div className="div33 bg-[#f5f5f7] p-[30px]">
         <Dashboard />
       </div>
-      <div className="div44 bg-[#f5f5f7] p-[30px] pr-[60px]">
+      <div className="div44 bg-[#f5f5f7] p-[15px]">
         <DashboardRight />
       </div>
     </div>

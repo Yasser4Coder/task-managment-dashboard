@@ -1,7 +1,7 @@
 .parent {
   display: grid;
   grid-template-columns: repeat(2, 126px) 1fr;
-  grid-template-rows: 90px repeat(4, 1fr);
+  grid-template-rows: 180px repeat(4, 1fr);
   grid-column-gap: px;
   grid-row-gap: 0px;
 }
@@ -18,10 +18,16 @@
 
 .parent1 {
   display: grid;
-  grid-template-columns: repeat(2, 126px) 1fr repeat(4, 126px);
+  grid-template-columns: repeat(2, 126px) 1fr repeat(4, 120px);
   grid-template-rows: 90px repeat(4, 1fr);
-  grid-column-gap: px;
   grid-row-gap: 0px;
+}
+
+@media screen and (max-width: 1600px) {
+  .parent1 {
+    grid-template-columns: repeat(2, 126px) 1fr repeat(1, 126px);
+    grid-template-rows: 90px repeat(4, 1fr);
+  }
 }
 
 .div11 {
